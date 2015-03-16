@@ -46,6 +46,6 @@ var app = {
 
         console.log('Received Event: ' + id);
 
-        console.log("Hey, I am here. ");
+        console.log("Hey, I am here with jquery mobile. ");
     }
 };
