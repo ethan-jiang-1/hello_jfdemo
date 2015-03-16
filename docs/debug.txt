@@ -1,0 +1,3 @@
+adb logcat CordovaLog:D *:S
+
+The "adb logcat CordovaLog:D *:S" filtering will show you only CordovaLog items (the "D" indicates Debug level or above) and the "*:S" indicates to filter out all others. So when you launch your app, the console will show the output from the JavaScript console (which PhoneGap redirects to the Android log as shown).
