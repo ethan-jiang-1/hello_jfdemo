@@ -29,6 +29,7 @@
 /home/ethan/phonegap/jfdemo/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/_where-is-www.txt \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/sharing.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/css \
@@ -36,6 +37,7 @@
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/cordova_plugins.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/index.html \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/drinking.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/logo.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
@@ -44,6 +46,7 @@
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/index.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/jquery-2.1.1 \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/jquery.mobile-1.4.4 \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/drinking.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/jquery-2.1.1/jquery-2.1.1.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.min.map \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/jquery.mobile-1.4.4/jquery.mobile.icons-1.4.4.min.css \
