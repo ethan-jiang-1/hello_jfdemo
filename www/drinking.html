@@ -1,3 +1,35 @@
+<!DOCTYPE html>
 <html>
-Drinking
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.css" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Drinking Measurement Demo</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+             function addLog(str) {
+			   var p = "<p>" + str + "</p>";
+			   $("#log").append(p);
+             }
+			 
+			 function getDrinkingData() {
+				addLog("query drinking data");
+			 }
+		</script>		
+		<div class="app">
+			<div class="margin:0 auto;margin-left:auto;margin-right:auto;align:center;text-align:center;">
+			  Measurement Demo 
+			</div>
+			<button onclick="getDrinkingData();" style="display:block;font-size:18pt;" data-icon="bars"  > Get Measurement   </button>		
+		</div>
+      
+		<div id="log" style="line-height: 0.1; font-size:10pt;">
+		</div>
+        <script type="text/javascript" src="js/jquery-2.1.1/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.js"></script>
+    </body>
 </html>
