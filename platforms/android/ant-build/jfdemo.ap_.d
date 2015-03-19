@@ -38,10 +38,15 @@
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/index.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/drinking.html \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/1-black-white.jpg \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/2-heart.jpg \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/4-zebra-lady.jpg \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/logo.png \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/3-love.jpg \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/css/log.css \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/css/index.css \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/index.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/jquery-2.1.1 \

@@ -23,19 +23,21 @@
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.css"
         <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
+        <title>Jelly Fish Demo</title>
     </head>
     <body>
         <div class="app">
+
+            <h1 style"text-align:center;">Jellyfish Demo</h1>
             <!--
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
+			<div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
-            -->
+			-->
             <script type="text/javascript">
              function gotoDrinking() {
                 window.location = "drinking.html";
@@ -44,12 +46,13 @@
                 window.location = "sharing.html";
              }                 
             </script>
-
-            <div style="margin-left:-10px; margin-top:30px">
-                <button onclick="gotoDrinking();" style="display:block;font-size:18pt;"> Drinking </button>
+			
+			<div>
+                <button onclick="gotoDrinking();" style="display:block;font-size:18pt;" data-icon="bars" data-transition="flip" > Measurement Demo  </button>
                 <br/>
-                <button onclick="gotoSharing();" style="display:block;font-size:18pt;"> Sharing </button>
-            </div> 
+                <button onclick="gotoSharing();" style="display:block;font-size:18pt;" data-icon="grid"> Picture Demo </button>
+			</div>
+			<!--<a href="drinking.html" data-role="button" data-transition="flip" data-inline="true">page</a>-->
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>        
