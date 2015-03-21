@@ -8,25 +8,35 @@
 		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.css" />
         <meta name="msapplication-tap-highlight" content="no" />
         <title>Jellyfish Demo </title>
+
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+
     </head>
     <body>
 		<div data-role="page" id="home">
 			<div data-role="header">
-				<h1>home</h1>
+				<h1>Jellyfish Demo</h1>
 			</div>
 			<div data-role="content">
-                <a href="#drink" data-role="button" data-icon="bars" data-transition="flip" > Measurement Demo  </a>
+                <a href="#drink" data-role="button" data-icon="bars" data-transition="slide" > Drinking Demo  </a>
                 <br>
-                <a href="#picture" data-role="button" data-icon="grid" data-transition="flip"> Picture Demo </a>
+                <a href="#picture" data-role="button" data-icon="grid" data-transition="slide"> Picture Demo </a>
                 <br>
-                <a href="#test" data-role="button" data-icon="gear" data-transition="flip"> Socket Testing </a>				
+                <a href="#test" data-role="button" data-icon="gear" data-transition="slide"> Socket Testing </a>	
+                <br>
+                <div>
+                <image src="img/bowhead.png" style="height:100%; width:100%" />			
+                </div>
 			</div>
 
 		</div>
 
 		<div data-role="page" id="drink">
 			<div data-role="header" data-add-back-btn="true">
-				<h1>Mesaurement Demo</h1>
+				<h1>Drinking Demo</h1>
 			</div>
 		</div>
 
@@ -35,40 +45,57 @@
 				<h1>Picture Demo</h1>
 			</div>
 			<div data-role="content">
-				<ul data-role="listview">
+				<ul data-role="listview" data-icon="refresh">
 					<li><a href="#" onclick="changePicture(1);">
 						<img src="img/1-black-white.jpg" />
 						<h3>Black-white</h3>
+						<p id="lvp1"></p>
 						</a>
 					</li>
 					<li><a href="#" onclick="changePicture(2);">
 						<img src="img/2-heart.jpg" />
 						<h3>Heart</h3>
+						<p id="lvp2"></p>
 						</a>
 					</li>					
 					<li><a href="#" onclick="changePicture(3);">
 						<img src="img/3-love.jpg" />
 						<h3>Love</h3>
+						<p id="lvp3"></p>
 						</a>
 					</li>
 					<li><a href="#" onclick="changePicture(4);">
 						<img src="img/4-zebra-lady.jpg" />
 						<h3>Zebra Lady</h3>
+						<p id="lvp4"></p>
 						</a>
 					</li>					
 					<li><a href="#" onclick="changePicture(5);">
 						<img src="img/5-men.jpg" />
 						<h3>Men</h3>
+						<p id="lvp5"></p>
 						</a>
 					</li>
 					<li><a href="#" onclick="changePicture(6);">
 						<img src="img/6-horse.jpg" />
 						<h3>Horse</h3>
+						<p id="lvp6"></p>
 						</a>
 					</li>
 				</ul>				
 			</div>
 		</div>
+		<script type="text/javascript">
+			function changePicture(pno) {
+				for (i=1;i<=6;i++) {
+					ipno = "#lvp" + i;
+					$(ipno).html("");
+				}
+
+				ipno = "#lvp" + pno; 
+				$(ipno).html("selected to change");
+			}
+		</script>
 
 		<div data-role="page" id="test">
 			<div data-role="header" data-add-back-btn="true">
@@ -103,13 +130,6 @@
 				</div>
 			</div>		            
 		</div>
-
-
-		<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-2.1.1/jquery-2.1.1.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
- 
         <script type="text/javascript">
             var host = "192.168.1.1";
             var port = 6000;
