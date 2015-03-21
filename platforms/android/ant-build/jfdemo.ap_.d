@@ -31,11 +31,13 @@
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/sharing.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/index_new.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/css \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/cordova.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/cordova_plugins.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/index_test_socket.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/index.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/test_socket.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/drinking.html \

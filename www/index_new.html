@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, xheight=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.css" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Jellyfish Demo </title>
+    </head>
+    <body>
+    	<!--
+		<div data-role="page" id="home">
+			<div data-role="header">
+				<h1>home</h1>
+			</div>
+			<div data-role="content">
+                <a href="#drink" data-role="button" data-icon="bars" data-transition="flip" > Measurement Demo  </a>
+                <br>
+                <a href="#picture" data-role="button" data-icon="grid" data-transition="flip"> Picture Demo </a>
+                <br>
+                <a href="#test" data-role="button" data-icon="gear" data-transition="flip"> Socket Testing </a>				
+			</div>
+
+		</div>
+
+		<div data-role="page" id="drink">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Mesaurement Demo</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="picture" data-add-back-btn="true">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Picture Demo</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li><a href="#" onclick="changePicture(1);">
+						<img src="img/1-black-white.jpg" />
+						<h3>Black-white</h3>
+						</a>
+					</li>
+					<li><a href="#" onclick="changePicture(2);">
+						<img src="img/2-heart.jpg" />
+						<h3>Heart</h3>
+						</a>
+					</li>					
+					<li><a href="#" onclick="changePicture(3);">
+						<img src="img/3-love.jpg" />
+						<h3>Love</h3>
+						</a>
+					</li>
+					<li><a href="#" onclick="changePicture(4);">
+						<img src="img/4-zebra-lady.jpg" />
+						<h3>Zebra Lady</h3>
+						</a>
+					</li>					
+					<li><a href="#" onclick="changePicture(5);">
+						<img src="img/5-men.jpg" />
+						<h3>Men</h3>
+						</a>
+					</li>
+					<li><a href="#" onclick="changePicture(6);">
+						<img src="img/6-horse.jpg" />
+						<h3>Horse</h3>
+						</a>
+					</li>
+				</ul>				
+			</div>
+		</div>
+
+		<div data-role="page" id="test">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Socket test</h1>
+			</div>
+		</div>
+		-->	
+			<div data-role="fieldcontain">
+	         <label for="number">Server IP</label>
+	         <input type="text"  id="server_ip" value="" data-clear-btn="true"/>
+			</div>	
+			<div data-role="fieldcontain">
+	         <label for="number">Port</label>
+	         <input type="number"  id="server_port" value="" data-clear-btn="true" />
+			</div>			
+			<div data-role="fieldcontain">
+	         <label for="number">MessageToSend</label>
+	         <input type="text"  id="server_msg" value="" data-clear-btn="true" />
+			</div>	
+			 <div>
+            	<br>
+            	<button onclick="connect()">Connect</button><br>
+                <button onclick="isConnected()">is Connected</button><br>
+            	<button onclick="send()">Send</button><br>
+            	<button onclick="disconnect()">Disconnect</button><br>
+                <button onclick="disconnectAll()">DisconnectAll</button><br>
+            </div>
+
+
+			<div id="log" style="line-height: 0.1; font-size:10pt;">
+				xxxx
+			</div>
+			<div id="pre_dump" style="font-size:8pt;">
+			</div>		            
+
+
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.js"></script>
+
+ 
+        <script type="text/javascript">
+            var host = "192.168.1.1";
+            var port = 6000;
+            var data = "%B1Q,100,1,1,0d0a";
+            var key = "";
+
+            function initValues(){
+            	$("#server_ip").val(host);
+            	$("#server_port").val(port);
+            	$("#server_msg").val(data);
+            }
+
+            initValues();
+            addLog("abc");
+
+            function getValues() {
+            	host = $("#server_ip").val();
+            	port = parseInt($("#server_port").val());
+            	data = $("#server_msg").val();
+            }
+            
+            function stub(d) {
+            	console.log(d);
+            	addLog(d);
+            }
+        
+	        function onConnect(k) {
+	            console.log('Established connection with ', k);
+	            key = k;
+	            addLog("connection key=" + key);
+	        }
+	        
+	        function connect() {
+	        	addLog("try connect...");
+	        	//my_dump(window.tlantic, "window.tlantic");
+	        	
+	        	getValues();
+	            window.tlantic.plugins.socket.connect(onConnect, stub, host, port);
+	        }
+	        
+	        function send() {
+	        	getValues();
+	        	addLog("connection key=" + key);
+	        	addLog("Message to send: " + data);
+	            window.tlantic.plugins.socket.send(stub, stub, key, data);
+	        }
+	        
+	        function disconnect() {
+	        	getValues();
+	        	addLog("connection key=" + key);
+	            window.tlantic.plugins.socket.disconnect(stub, stub, key);
+	        }
+	        
+	        function disconnectAll() {
+	        	getValues();
+	            window.tlantic.plugins.socket.disconnectAll(stub, stub);
+	        }
+	        
+	        function isConnected() {
+	        	getValues();
+	            window.tlantic.plugins.socket.isConnected(key, stub, stub);
+	        }
+	        
+	        document.addEventListener('SOCKET_RECEIVE_DATA_HOOK', function (ev) {
+	                                  console.log('Data has been received: ', ev.metadata);
+	                                  p = ev.metadata;
+
+	                                  console.log(p);
+	                                  addLog("Message Received: " + p);
+	                                  my_dump(ev, "ev");
+	                                  
+	                                  });
+
+		</script>        
+    </body>
+</html>
