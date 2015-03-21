@@ -8,6 +8,9 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
+    <feature name="Socket">
+        <param name="android-package" value="com.tlantic.plugins.socket.SocketPlugin" />
+    </feature>
     <name>jfdemo</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -17,7 +20,4 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <feature name="Socket">
-        <param name="android-package" value="com.tlantic.plugins.socket.SocketPlugin" />
-    </feature>
 </widget>

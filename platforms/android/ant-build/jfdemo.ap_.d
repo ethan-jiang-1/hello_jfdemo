@@ -37,6 +37,7 @@
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/cordova_plugins.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/index.html \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/test_socket.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/drinking.html \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/1-black-white.jpg \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/2-heart.jpg \
@@ -44,8 +45,11 @@
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/logo.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/3-love.jpg \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/com.tlantic.plugins.socket \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/com.tlantic.plugins.socket/www \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/com.tlantic.plugins.socket/www/socket.js \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/css/log.css \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/css/index.css \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/js/index.js \

@@ -1,5 +1,8 @@
 /home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes.dex : \
 /home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes/com/tlantic/plugins/socket/Connection.class \
+/home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes/com/tlantic/plugins/socket/SocketPlugin.class \
+/home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes/com/tlantic/plugins/socket/SocketPlugin$1.class \
 /home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes/com/bowhead/jfdemo/R$attr.class \
 /home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes/com/bowhead/jfdemo/R$string.class \
 /home/ethan/phonegap/jfdemo/platforms/android/ant-build/classes/com/bowhead/jfdemo/BuildConfig.class \
