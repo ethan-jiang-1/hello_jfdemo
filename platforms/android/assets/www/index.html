@@ -32,10 +32,7 @@
     <body>
 		<div data-role="page" id="home">
 			<div data-role="content" style="background-color:#79CDF1;">
-				<div id="home-flash" style="display:none;">
-				 <image src="img/home-page.png" style="text-aligh:center" height="40%" width="100%" />
-				</div>
-				<div id="home-menu" style="display:true; margin-top:40px">
+				<div id="home-menu">
 	                <a href="#drink" data-role="button" data-transition="slide" style="background-color:#79CDF1;" id="anchor_img1" ><image src="img/my-jellyfish.png" height="150" /></a>
 	                <a href="#picture" data-role="button" data-transition="slide" style="background-color:#79CDF1;" id="anchor_img2" ><image src="img/my-photo.png" height="150" /></a>
 	                <a href="#message" data-role="button"  data-transition="slide" class="ui-disabled" style="background-color:#79CDF1;" id="anchor_img3"> <image src="img/my-friend.png" height="150" /> </a>
@@ -67,85 +64,100 @@
 				<div>
 				  <a href="#" data-rel="back" ><image src="img/back.png"   style="height:100%; width:100%; margin-left:-30px;" /></a>	
 				</div>
-				<div style="margin-top:20px;">				
-					<ul data-role="listview" data-icon="refresh">
-						<li><a href="#" onclick="changePicture(1);">
-							<img src="img/1-black-white.jpg" />
-							<h3>Black-white</h3>
-							<p id="lvp1"></p>
-							</a>
-						</li>
-						<li><a href="#" onclick="changePicture(2);">
-							<img src="img/2-heart.jpg" />
-							<h3>Heart</h3>
-							<p id="lvp2"></p>
-							</a>
-						</li>					
-						<li><a href="#" onclick="changePicture(3);">
-							<img src="img/3-love.jpg" />
-							<h3>Love</h3>
-							<p id="lvp3"></p>
-							</a>
-						</li>
-						<li><a href="#" onclick="changePicture(4);">
-							<img src="img/4-zebra-lady.jpg" />
-							<h3>Zebra Lady</h3>
-							<p id="lvp4"></p>
-							</a>
-						</li>					
-						<li><a href="#" onclick="changePicture(5);">
-							<img src="img/5-men.jpg" />
-							<h3>Men</h3>
-							<p id="lvp5"></p>
-							</a>
-						</li>
-						<li><a href="#" onclick="changePicture(6);">
-							<img src="img/6-horse.jpg" />
-							<h3>Horse</h3>
-							<p id="lvp6"></p>
-							</a>
-						</li>
-					</ul>
-					<br>
-					<br>
-       <ul data-role="listview" data-theme="c">
-        <li><a data-parm="john" href="#two" data-rel="dialog">one</a></li>
-        <li><a data-parm="mary" href="#two" data-rel="dialog">two</a></li>
-        <li><a data-parm="sue" href="#two" data-rel="dialog">three</a></li>
-        </ul>
-
+				<div style="margin-left:0px">	
+					<table id="table-pic6" width="360px">
+					<tr>
+						<td width="10%"></td>
+						<td width="30%">
+						<a data-parm="img/1-black-white.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/1-black-white.jpg" width="100%"/></a>
+						</td>
+						<td width="20%"></td>
+						<td width="30%">
+						<a data-parm="img/2-heart.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/2-heart.jpg" width="100%"/></a>	
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td width="30%">
+						<a data-parm="img/3-love.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/3-love.jpg" width="100%"/></a>
+						</td>
+						<td width="20%"></td>
+						<td width="30%">
+						<a data-parm="img/4-zebra-lady.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/4-zebra-lady.jpg" width="100%"/></a>	
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td width="30%">
+						<a data-parm="img/5-men.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/5-men.jpg" width="100%"/></a>
+						</td>
+						<td width="20%"></td>
+						<td width="30%">
+						<a data-parm="img/6-horse.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/6-horse.jpg" width="100%"/></a>	
+						</td>
+						<td width="10%"></td>
+					</tr>					
+					</table>
 				</div>				
 			</div>
 		</div>
-		<script type="text/javascript">
-			function changePicture(pno) {
-				for (i=1;i<=6;i++) {
-					ipno = "#lvp" + i;
-					$(ipno).html("");
-				}
 
-				ipno = "#lvp" + pno; 
-				$(ipno).html("selected to change");
-			}
-		</script>
-
-		<div data-role="page" id="two">
-		  <div data-role="header" style="background-color:#79CDF1">
-		    <h2>Selected Picture</h2>
-		  </div>
-		  <div>
-		    <div id="showParmHere"></div>
-		  </div>
-		</div>
 		<script type="text/javascript">
 			$("a").on("click", function (event) {
 
 			   var parm = $(this).attr("data-parm");
-			   //do something here with parameter on page 2 (or any page in the dom)
-			   $("#showParmHere").html(parm);
+			   $("#pop_pic").attr("src",parm);
 
 			});
-		</script>
+
+			function close_send_picture() {
+				$("#pic_dialog").dialog('close');
+			}
+			
+			function send_picture() {
+				var src = $("#pop_pic").attr("src");
+				pic_no = parseInt(src[4]);  //img/?-xxx.jpg
+
+				data_pic = "%B1Q,100," + pic_no + ",1,1\r\n";
+				$("#server_msg").val(data_pic);
+
+				setTimeout(close_send_picture,3000);
+
+				$.mobile.loading('show');
+				disconnectAll(); 
+				connect();
+				send();
+				$.mobile.loading('hide');
+			}
+		</script>		
+		<div data-role="page" id="pic_dialog">
+		  <div data-role="header" style="background-color:#79CDF1">
+		    <h2>Selected Picture</h2>
+		  </div>
+		  <div>
+		    <div id="showParmHere">
+		    	<table id="table-pic1" witdh="320px">
+		    	<tr>
+			    	<td width="5%"></td>
+			    	<td width="90%">
+			    	<image id="pop_pic" src="img/1-black-white.jpg" height="480px" width="100%" style="text-align:center"/>
+			    	</td>
+			    	<td witdh="5%"></td>
+			    </tr>
+		    	<tr>
+			    	<td width="5%"></td>
+			    	<td width="90%">
+			    	<a href="#" onclick="send_picture()"> <image src="img/send-02.png" width="100%"/></a>
+		    		</td>
+			    	<td width="5%"></td>
+		    	</tr>
+		    	</table>
+		    </div>
+		  </div>
+		</div>
+
 
 		<div data-role="page" id="message">
 			<div data-role="header" data-add-back-btn="true">
@@ -163,15 +175,15 @@
 				<h1>Socket test</h1>
 			</div>
 			<div data-role="content">
-				<div data-role="fieldcontain">
+				<div data-role="xfieldcontain">
 		         <label for="number">Server IP</label>
 		         <input type="text"  id="server_ip" value="" data-clear-btn="true"/>
 				</div>	
-				<div data-role="fieldcontain">
+				<div data-role="xfieldcontain">
 		         <label for="number">Port</label>
 		         <input type="number"  id="server_port" value="" data-clear-btn="true" />
 				</div>			
-				<div data-role="fieldcontain">
+				<div data-role="xfieldcontain">
 		         <label for="number">MessageToSend</label>
 		         <input type="text"  id="server_msg" value="" data-clear-btn="true" />
 				</div>	
@@ -280,9 +292,13 @@
 			});
 		</script>
 		<script type="text/javascript">
+			function show_home_menu() {
+				//$("#home-flash").css('display','none');
+				//$("#home-menu").css('display','true');
+			}
+
 			$(function(){
-				//$("#home-flash").delay(2000).hide(1);
-				//$("#home-menu").delay(2000).show(1);
+				$("#home-flash").hide(20000);
 			});
 	
 			$(function(){
@@ -291,6 +307,9 @@
 				$("#anchor_img3").addClass("anchor_img");				
 				$("#anchor_img4").addClass("anchor_img");
 				//$("#home-menu").delay(2000).show(1);
+
+				$("#table-pic6").attr("width",$.mobile.getScreenWidth() );
+				//$("#table-pic6").attr("width",$.mobile.getScreenWidth()-20 );
 			});
 
 
