@@ -6,6 +6,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, xheight=device-height, target-densitydpi=device-dpi" />
 		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.css" />
+		<link rel="stylesheet" type="text/css" href="js/index.js" />
         <meta name="msapplication-tap-highlight" content="no" />
         <title>Jellyfish Demo </title>
 
@@ -16,27 +17,37 @@
 
     </head>
     <body>
-		<div data-role="page" id="home">
-			<div data-role="header">
-				<h1>Jellyfish Demo</h1>
-			</div>
-			<div data-role="content">
-                <a href="#drink" data-role="button" data-icon="bars" data-transition="slide" > Drinking Demo  </a>
+		<div data-role="page" id="home"">
+			<div data-role="content" style="background-color:#79CDF1;">
+				<div id="home-flash" style="display:none;">
+				 <image src="img/home-page.png" style="text-aligh:center" height="40%"" width="100%" />
+				</div>
+				<div id="home-menu" style="display:true">
+                <a href="#drink" data-role="button" data-transition="slide" style="background-color:#79CDF1;" ><image src="img/my-jellyfish.png" height="200" /></a>
                 <br>
-                <a href="#picture" data-role="button" data-icon="grid" data-transition="slide"> Picture Demo </a>
+                <a href="#picture" data-role="button" data-transition="slide" style="background-color:#79CDF1;" ><image src="img/my-photo.png" height="200" /></a>
+                <br>
+                <a href="#message" data-role="button"  data-transition="slide" class="ui-disabled" style="background-color:#79CDF1;"> <image src="img/my-friend.png" height="200" /> </a>
                 <br>
                 <a href="#test" data-role="button" data-icon="gear" data-transition="slide"> Socket Testing </a>	
                 <br>
-                <div>
-                <image src="img/bowhead.png" style="height:100%; width:100%" />			
-                </div>
+				</div>
 			</div>
-
 		</div>
 
-		<div data-role="page" id="drink">
-			<div data-role="header" data-add-back-btn="true">
+		<div data-role="page" id="drink" >
+			<!--
+			<div data-role="header" data-add-back-btn="true" style="background-color:#79CDF1">
 				<h1>Drinking Demo</h1>
+			</div>
+			-->
+			<div data-role="content"  style="background-color:#79CDF1">
+				<div>
+				  <a href="#" data-rel="back" ><image src="img/back.png"   style="height:100%; width:100%" /></a>	
+				</div>
+                <div class="blinking">
+                <image src="img/jellyfish-water.png" style="height:100%; width:100%" />			
+                </div>
 			</div>
 		</div>
 
@@ -97,6 +108,17 @@
 			}
 		</script>
 
+		<div data-role="page" id="message">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Message Demo</h1>
+			</div>
+			<div data-role="content">
+                <div>
+                <image src="img/jellyfish.png" style="height:100%; width:100%" />			
+                </div>
+			</div>
+		</div>		
+		
 		<div data-role="page" id="test">
 			<div data-role="header" data-add-back-btn="true">
 				<h1>Socket test</h1>
@@ -116,11 +138,11 @@
 				</div>	
 				 <div>
 	            	<br>
-	            	<button onclick="connect()">Connect</button><br>
-	                <button onclick="isConnected()">is Connected</button><br>
-	            	<button onclick="send()">Send</button><br>
-	            	<button onclick="disconnect()">Disconnect</button><br>
-	                <button onclick="disconnectAll()">DisconnectAll</button><br>
+	            	<button onclick="connect()" data-icon="plus">Connect</button>
+	            	<button onclick="send()" data-icon="action">Send</button>
+	            	<button onclick="disconnect()" data-icon="minus">Disconnect</button><br>
+	                <button onclick="isConnected()" data-icon="check">is Connected</button>
+	                <button onclick="disconnectAll()" data-icon="delete">DisconnectAll</button>
 	            </div>
 
 
@@ -133,7 +155,7 @@
         <script type="text/javascript">
             var host = "192.168.1.1";
             var port = 6000;
-            var data = "%B1Q,100,1,1,1,0d0a";
+            var data = "%B1Q,100,1,1,1";
             var key = "";
 
             function initValues(){
@@ -148,7 +170,7 @@
             function getValues() {
             	host = $("#server_ip").val();
             	port = parseInt($("#server_port").val());
-            	data = $("#server_msg").val();
+            	data = $("#server_msg").val() + "\r\n";
             }
             
             function stub(d) {
@@ -202,6 +224,28 @@
 	                                  
 	                                  });
 
-		</script>        
+		</script>
+		<script type="text/javascript">
+			function ScaleContentToDevice(){
+				scroll(0, 0);
+				var content = $.mobile.getScreenHeight() - $(".ui-header").outerHeight() - $(".ui-footer").outerHeight() - $(".ui-content").outerHeight() + $(".ui-content").height();
+				$(".ui-content").height(content);
+			};  
+
+			$(document).on( "pagecontainershow", function(){
+				ScaleContentToDevice();        
+			});
+
+			$(window).on("resize orientationchange", function(){
+				ScaleContentToDevice();
+			});
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				//$("#home-flash").delay(2000).hide(1);
+				//$("#home-menu").delay(2000).show(1);
+			});
+	
+		</script>
     </body>
 </html>
