@@ -14,24 +14,35 @@
         <script type="text/javascript" src="js/jquery-2.1.1/jquery-2.1.1.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.4/jquery.mobile-1.4.4.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
-
+		<style>
+			.anchor_img {
+				margin:0;
+				margin-left:-30px;
+				padding:0;
+				border-width:0;
+				border-color:#79CDF1;
+				background-color:#79CDF1;
+				-webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+				-moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+				box-shadow:  0 0 0 rgba(0,0,0,0);
+			}
+		
+		</style>
     </head>
     <body>
-		<div data-role="page" id="home"">
+		<div data-role="page" id="home">
 			<div data-role="content" style="background-color:#79CDF1;">
 				<div id="home-flash" style="display:none;">
-				 <image src="img/home-page.png" style="text-aligh:center" height="40%"" width="100%" />
+				 <image src="img/home-page.png" style="text-aligh:center" height="40%" width="100%" />
 				</div>
-				<div id="home-menu" style="display:true">
-                <a href="#drink" data-role="button" data-transition="slide" style="background-color:#79CDF1;" ><image src="img/my-jellyfish.png" height="200" /></a>
-                <br>
-                <a href="#picture" data-role="button" data-transition="slide" style="background-color:#79CDF1;" ><image src="img/my-photo.png" height="200" /></a>
-                <br>
-                <a href="#message" data-role="button"  data-transition="slide" class="ui-disabled" style="background-color:#79CDF1;"> <image src="img/my-friend.png" height="200" /> </a>
-                <br>
-                <a href="#test" data-role="button" data-icon="gear" data-transition="slide"> Socket Testing </a>	
-                <br>
-				</div>
+				<div id="home-menu" style="display:true; margin-top:40px">
+	                <a href="#drink" data-role="button" data-transition="slide" style="background-color:#79CDF1;" id="anchor_img1" ><image src="img/my-jellyfish.png" height="150" /></a>
+	                <a href="#picture" data-role="button" data-transition="slide" style="background-color:#79CDF1;" id="anchor_img2" ><image src="img/my-photo.png" height="150" /></a>
+	                <a href="#message" data-role="button"  data-transition="slide" class="ui-disabled" style="background-color:#79CDF1;" id="anchor_img3"> <image src="img/my-friend.png" height="150" /> </a>
+	                <br>
+	                <a href="#test" data-role="button"  data-transition="slide" style="background-color:#79CDF1; margin-left:-100px;" id="anchor_img4"> <image src="img/bowhead-technology.png" height="80" /> </a>
+            	</div>
+
 			</div>
 		</div>
 
@@ -43,7 +54,7 @@
 			-->
 			<div data-role="content"  style="background-color:#79CDF1">
 				<div>
-				  <a href="#" data-rel="back" ><image src="img/back.png"   style="height:100%; width:100%" /></a>	
+				  <a href="#" data-rel="back" ><image src="img/back.png"   style="height:100%; width:100%; margin-left:-30px;" /></a>	
 				</div>
                 <div class="blinking">
                 <image src="img/jellyfish-water.png" style="height:100%; width:100%" />			
@@ -52,48 +63,58 @@
 		</div>
 
 		<div data-role="page" id="picture" data-add-back-btn="true">
-			<div data-role="header" data-add-back-btn="true">
-				<h1>Picture Demo</h1>
-			</div>
-			<div data-role="content">
-				<ul data-role="listview" data-icon="refresh">
-					<li><a href="#" onclick="changePicture(1);">
-						<img src="img/1-black-white.jpg" />
-						<h3>Black-white</h3>
-						<p id="lvp1"></p>
-						</a>
-					</li>
-					<li><a href="#" onclick="changePicture(2);">
-						<img src="img/2-heart.jpg" />
-						<h3>Heart</h3>
-						<p id="lvp2"></p>
-						</a>
-					</li>					
-					<li><a href="#" onclick="changePicture(3);">
-						<img src="img/3-love.jpg" />
-						<h3>Love</h3>
-						<p id="lvp3"></p>
-						</a>
-					</li>
-					<li><a href="#" onclick="changePicture(4);">
-						<img src="img/4-zebra-lady.jpg" />
-						<h3>Zebra Lady</h3>
-						<p id="lvp4"></p>
-						</a>
-					</li>					
-					<li><a href="#" onclick="changePicture(5);">
-						<img src="img/5-men.jpg" />
-						<h3>Men</h3>
-						<p id="lvp5"></p>
-						</a>
-					</li>
-					<li><a href="#" onclick="changePicture(6);">
-						<img src="img/6-horse.jpg" />
-						<h3>Horse</h3>
-						<p id="lvp6"></p>
-						</a>
-					</li>
-				</ul>				
+			<div data-role="content" style="background-color:#79CDF1">
+				<div>
+				  <a href="#" data-rel="back" ><image src="img/back.png"   style="height:100%; width:100%; margin-left:-30px;" /></a>	
+				</div>
+				<div style="margin-top:20px;">				
+					<ul data-role="listview" data-icon="refresh">
+						<li><a href="#" onclick="changePicture(1);">
+							<img src="img/1-black-white.jpg" />
+							<h3>Black-white</h3>
+							<p id="lvp1"></p>
+							</a>
+						</li>
+						<li><a href="#" onclick="changePicture(2);">
+							<img src="img/2-heart.jpg" />
+							<h3>Heart</h3>
+							<p id="lvp2"></p>
+							</a>
+						</li>					
+						<li><a href="#" onclick="changePicture(3);">
+							<img src="img/3-love.jpg" />
+							<h3>Love</h3>
+							<p id="lvp3"></p>
+							</a>
+						</li>
+						<li><a href="#" onclick="changePicture(4);">
+							<img src="img/4-zebra-lady.jpg" />
+							<h3>Zebra Lady</h3>
+							<p id="lvp4"></p>
+							</a>
+						</li>					
+						<li><a href="#" onclick="changePicture(5);">
+							<img src="img/5-men.jpg" />
+							<h3>Men</h3>
+							<p id="lvp5"></p>
+							</a>
+						</li>
+						<li><a href="#" onclick="changePicture(6);">
+							<img src="img/6-horse.jpg" />
+							<h3>Horse</h3>
+							<p id="lvp6"></p>
+							</a>
+						</li>
+					</ul>
+					<br>
+					<br>
+       <ul data-role="listview" data-theme="c">
+        <li><a data-parm="john" href="#two" data-rel="dialog">one</a></li>
+        <li><a data-parm="mary" href="#two" data-rel="dialog">two</a></li>
+        <li><a data-parm="sue" href="#two" data-rel="dialog">three</a></li>
+        </ul>
+
+				</div>				
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -106,6 +127,24 @@
 				ipno = "#lvp" + pno; 
 				$(ipno).html("selected to change");
 			}
+		</script>
+
+		<div data-role="page" id="two">
+		  <div data-role="header" style="background-color:#79CDF1">
+		    <h2>Selected Picture</h2>
+		  </div>
+		  <div>
+		    <div id="showParmHere"></div>
+		  </div>
+		</div>
+		<script type="text/javascript">
+			$("a").on("click", function (event) {
+
+			   var parm = $(this).attr("data-parm");
+			   //do something here with parameter on page 2 (or any page in the dom)
+			   $("#showParmHere").html(parm);
+
+			});
 		</script>
 
 		<div data-role="page" id="message">
@@ -246,6 +285,15 @@
 				//$("#home-menu").delay(2000).show(1);
 			});
 	
+			$(function(){
+				$("#anchor_img1").addClass("anchor_img");				
+				$("#anchor_img2").addClass("anchor_img");				
+				$("#anchor_img3").addClass("anchor_img");				
+				$("#anchor_img4").addClass("anchor_img");
+				//$("#home-menu").delay(2000).show(1);
+			});
+
+
 		</script>
     </body>
 </html>
