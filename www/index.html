@@ -29,27 +29,36 @@
 		
 		</style>
     </head>
-    <body>
-		<div data-role="page" id="home">
-			<div data-role="content" style="background-color:#79CDF1;">
+    <body style="background-color:#79CDF1;">
+    	<div data-role="page" id="splash" style="background-color:#79CDF1;">
+		    <div data-role="content">
+		        <p><img src="img/homepage.png" style="width: 100%; height: 100%" /></p>
+		    </div>    		
+    	</div>
+	    <script type="text/javascript">
+		    $(function() {
+		        var hideSplash = function() {
+		            $.mobile.changePage($('#home'),{transition: 'slide'});
+		        };
+		        setTimeout(hideSplash, 1000);
+		    });
+		</script>
+
+		<div data-role="page" id="home" style="background-color:#79CDF1;">
+			<div data-role="content">
 				<div id="home-menu">
 	                <a href="#drink" data-role="button" data-transition="slide" style="background-color:#79CDF1;" id="anchor_img1" ><image src="img/my-jellyfish.png" height="150" /></a>
 	                <a href="#picture" data-role="button" data-transition="slide" style="background-color:#79CDF1;" id="anchor_img2" ><image src="img/my-photo.png" height="150" /></a>
 	                <a href="#message" data-role="button"  data-transition="slide" class="ui-disabled" style="background-color:#79CDF1;" id="anchor_img3"> <image src="img/my-friend.png" height="150" /> </a>
 	                <br>
-	                <a href="#test" data-role="button"  data-transition="slide" style="background-color:#79CDF1; margin-left:-100px;" id="anchor_img4"> <image src="img/bowhead-technology.png" height="80" /> </a>
+	                <a href="#test" data-role="button"  data-transition="slide" style="background-color:#79CDF1; margin-left:-40px;" id="anchor_img4"> <image src="img/bowhead-technology.png" height="60" /> </a>
             	</div>
 
 			</div>
 		</div>
 
-		<div data-role="page" id="drink" >
-			<!--
-			<div data-role="header" data-add-back-btn="true" style="background-color:#79CDF1">
-				<h1>Drinking Demo</h1>
-			</div>
-			-->
-			<div data-role="content"  style="background-color:#79CDF1">
+		<div data-role="page" id="drink" style="background-color:#79CDF1" >
+			<div data-role="content" >
 				<div>
 				  <a href="#" data-rel="back" ><image src="img/back.png"   style="height:100%; width:100%; margin-left:-30px;" /></a>	
 				</div>
@@ -59,47 +68,64 @@
 			</div>
 		</div>
 
-		<div data-role="page" id="picture" data-add-back-btn="true">
-			<div data-role="content" style="background-color:#79CDF1">
+		<div data-role="page" id="picture" style="background-color:#79CDF1">
+			<div data-role="content" >
 				<div>
 				  <a href="#" data-rel="back" ><image src="img/back.png"   style="height:100%; width:100%; margin-left:-30px;" /></a>	
 				</div>
 				<div style="margin-left:-10px">	
-					<table id="table-pic6" width="360px">
+					<table id="table-pic6" width="100%">
 					<tr>
-						<td width="10%"></td>
-						<td width="30%">
+						<td width="4%"></td>
+						<td width="28%">
 						<a data-parm="img/1-black-white.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/1-black-white.jpg" width="100%"/></a>
 						</td>
-						<td width="20%"></td>
-						<td width="30%">
+						<td width="4%"></td>
+						<td width="28%">
 						<a data-parm="img/2-heart.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/2-heart.jpg" width="100%"/></a>	
 						</td>
-						<td width="10%"></td>
+						<td width="4%"></td>
+						<td width="28%">
+						<a data-parm="img/3-love.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/3-love.jpg" width="100%"/></a>	
+						</td>
+						<td width="4%"></td>
 					</tr>
+
 					<tr>
-						<td width="10%"></td>
-						<td width="30%">
-						<a data-parm="img/3-love.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/3-love.jpg" width="100%"/></a>
+						<td width="4%"></td>
+						<td width="28%">
+						<a data-parm="img/4-zebra-lady.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/4-zebra-lady.jpg" width="100%" style="margin-top:10px"/></a>
 						</td>
-						<td width="20%"></td>
-						<td width="30%">
-						<a data-parm="img/4-zebra-lady.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/4-zebra-lady.jpg" width="100%"/></a>	
+						<td width="4%"></td>
+						<td width="28%">
+						<a data-parm="img/5-men.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/5-men.jpg" width="100%" style="margin-top:10px"/></a>	
 						</td>
-						<td width="10%"></td>
+						<td width="4%"></td>
+						<td width="28%">
+						<a data-parm="img/6-horse.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/6-horse.jpg" width="100%" style="margin-top:10px"/></a>	
+						</td>
+						<td width="4%"></td>
 					</tr>
-					<tr>
-						<td width="10%"></td>
-						<td width="30%">
-						<a data-parm="img/5-men.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/5-men.jpg" width="100%"/></a>
-						</td>
-						<td width="20%"></td>
-						<td width="30%">
-						<a data-parm="img/6-horse.jpg" href="#pic_dialog" data-rel="dialog"><img src="img/6-horse.jpg" width="100%"/></a>	
-						</td>
-						<td width="10%"></td>
-					</tr>					
+								
 					</table>
+					<br>
+					<br>
+					<table id="table-arr2" width="100%" style="color:#c0c0c0;font-size:30pt;">
+					<tr>
+					<td width="10%"><image src="img/backwards.png" height="50px"/></td>
+					<td width="80%"></td>
+					<td width="10%"><image src="img/forwards.png" height="50px"/></td>
+					</tr>
+					</table>
+
+					<table id="table-arr2" width="100%">
+					<tr>
+					<td width="10%"></td>
+					<td width="80%"><image src="img/photo-select.png" height="80px" style="margin-left:-80px"/></td>
+					<td width="10%"></td>
+					</tr>
+					</table>
+
 				</div>				
 			</div>
 		</div>
@@ -113,6 +139,9 @@
 			});
 
 			function close_send_picture() {
+				$("#pic_loading").css("visibility","hidden");
+				$("#pic_send").css("visibility","visible");	
+				
 				$("#pic_dialog").dialog('close');
 			}
 			
@@ -123,37 +152,40 @@
 				data_pic = "%B1Q,100," + pic_no + ",1,1\r\n";
 				$("#server_msg").val(data_pic);
 
-				setTimeout(close_send_picture,3000);
+				$("#pic_loading").css("visibility","visible");
+				$("#pic_send").css("visibility","hidden");
+				if (window.tlantic) {
+					disconnectAll(); 
+					connect();
+					send();
+				} 
 
-				$.mobile.loading('show', {text:"waiting", textVisible: true});
-				disconnectAll(); 
-				connect();
-				send();
-				$.mobile.loading('hide');
+				setTimeout(close_send_picture,2000);			
 			}
 		</script>		
-		<div data-role="page" id="pic_dialog">
-		  <div data-role="header" style="background-color:#79CDF1">
-		    <h2>Selected Picture</h2>
+		<div data-role="page" id="pic_dialog" style="background-color:#FFFFFF;">
+		  <div data-role="header" style="background-color:#FFFFFF; border-color:#FFFFFF;">
+		  	<p style="line-height:3px">&nbsp;</p>
 		  </div>
-		  <div>
+		  <div style="background-color:#FFFFFF;">
 		    <div id="showParmHere">
-		    	<table id="table-pic1" witdh="320px">
+		    	<table id="table-pic1" witdh="80%">
 		    	<tr>
 			    	<td width="5%"></td>
 			    	<td width="90%">
-			    	<image id="pop_pic" src="img/1-black-white.jpg" height="480px" width="100%" style="text-align:center"/>
+			    	<image id="pop_pic" src="img/1-black-white.jpg" height="460px" width="100%" style="text-align:center"/>
 			    	</td>
 			    	<td witdh="5%"></td>
 			    </tr>
-		    	<tr>
-			    	<td width="5%"></td>
-			    	<td width="90%">
-			    	<a href="#" onclick="send_picture()"> <image src="img/send-02.png" width="100%"/></a>
-		    		</td>
-			    	<td width="5%"></td>
-		    	</tr>
-		    	</table>
+				</table>
+		    	<div id="pic_send" style="visiblity:visible">
+		    	<a href="#" onclick="send_picture()"> 
+		    		<image src="img/send-02.png" width="100%" style="visiblity:visible" /> 
+		    	</a>
+		    	</div>
+		    	<div id="pic_loading" style="visibility:hidden; margin-left:182px;">
+		    		<image src="img/ajax-loader.gif" width="15%" style="visiblity:hidden"/>
+		    	</div>
 		    </div>
 		  </div>
 		</div>
@@ -284,11 +316,11 @@
 			};  
 
 			$(document).on( "pagecontainershow", function(){
-				ScaleContentToDevice();        
+				//ScaleContentToDevice();        
 			});
 
 			$(window).on("resize orientationchange", function(){
-				ScaleContentToDevice();
+				//ScaleContentToDevice();
 			});
 		</script>
 		<script type="text/javascript">

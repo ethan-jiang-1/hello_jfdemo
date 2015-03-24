@@ -51,13 +51,16 @@
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/jellyfish-water.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/my-photo.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/my-jellyfish.png \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/forwards.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/4-zebra-lady.jpg \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/logo.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/back.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/homepage.png \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/ajax-loader.gif \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/5-men.jpg \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/3-love.jpg \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/6-horse.jpg \
+/home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/backwards.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/img/send-02.png \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /home/ethan/phonegap/jfdemo/platforms/android/assets/www/plugins/com.tlantic.plugins.socket \
